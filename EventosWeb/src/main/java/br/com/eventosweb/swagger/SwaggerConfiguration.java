@@ -35,7 +35,7 @@ public class SwaggerConfiguration {
 		 
 		ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
  
-		apiInfoBuilder.title("Api-Pessoa");
+		apiInfoBuilder.title("Api-Eventos");
 		apiInfoBuilder.description("Api para realização de um CRUD.");
 		apiInfoBuilder.version("1.0");
 		apiInfoBuilder.termsOfServiceUrl("Termo de uso: Deve ser usada para estudos.");

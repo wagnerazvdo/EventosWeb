@@ -14,17 +14,9 @@ import br.com.eventosweb.model.Endereco;
 public interface EnderecoService {
 
 	Endereco salvar(Endereco endereco);
-
 	List<Endereco> listarEndereco();
-
-	Endereco buscarPorId(Integer id);
-
-	void removerEndereco(Object buscarPorId);
-
-	void removerEndereco(Endereco endereco);
-
-	void removerPorId(int idEndereco);
-
-	Endereco buscarPorId(int idEndereco);
+	void remover(Endereco endereco);
+	Endereco buscarPorId(Integer idEndereco);
+	void removerEndereco(Endereco buscarPorId);
 
 }

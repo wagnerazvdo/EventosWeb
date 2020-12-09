@@ -12,22 +12,11 @@ import br.com.eventosweb.model.Role;
  *
  */
 public interface RoleService {
-
-
+	
+	Role salvar(Role role);
 	List<Role> listarRole();
-
-	Role buscarPorId(Integer id);
-
-	void removerRole(Object buscarPorId);
-
-	void removerRole(Role role);
-
-	void removerPorId(int idRole);
-
-	Role buscarPorId(int idRole);
-
-	Role save(Role role);
-
-	void salvar(Role role);
+	void remover(Role role);
+	Role buscarPorId(Integer idRole);
+	void removerRole(Role buscarPorId);
 
 }

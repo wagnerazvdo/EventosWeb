@@ -36,7 +36,7 @@ public class EventoController {
 	
 	@PostMapping("/v1")
 	public Evento salvarv1(@RequestBody Evento evento) {
-		return this.eventoService.Salvar(evento);
+		return this.eventoService.salvar(evento);
 	}
 	 
 	@ApiOperation(
@@ -47,19 +47,19 @@ public class EventoController {
 	@PostMapping("/v2")
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public ResponseEntity<Evento> salvarv2(@RequestBody Evento evento) {
-		return ResponseEntity.ok().body(this.eventoService.Salvar(evento));
+		return ResponseEntity.ok().body(this.eventoService.salvar(evento));
 	}	
 	
 	@GetMapping("/v1")
 	public List<Evento> listarv1() {
 		System.out.println("Chamando a versão 1");
-		return this.eventoService.listaEventos();
+		return this.eventoService.listarEvento();
 	}
 	
 	@GetMapping("/v2")
 	@ResponseStatus(value = HttpStatus.OK)
 	public ResponseEntity<List<Evento>> Listarv2() {
-		return ResponseEntity.ok().body(this.eventoService.listaEventos());
+		return ResponseEntity.ok().body(this.eventoService.listarEvento());
 	}
 	
 	@DeleteMapping("/v1/{id}")
@@ -78,7 +78,7 @@ public class EventoController {
 	public Evento buscarEventoId(@PathVariable("id") Integer id, @RequestBody Evento evento) {
 		Evento eventoBD = this.eventoService.buscarPorId(id);
 		BeanUtils.copyProperties(evento, eventoBD, "id");
-		this.eventoService.Salvar(eventoBD);
+		this.eventoService.salvar(eventoBD);
 		return eventoBD;	
 	}
 	

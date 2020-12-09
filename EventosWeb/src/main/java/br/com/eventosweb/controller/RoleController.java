@@ -49,7 +49,7 @@ public class RoleController {
 	@PostMapping("/v2")
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public ResponseEntity<Role> salvarv2(@RequestBody Role role) {
-		return ResponseEntity.ok().body(this.roleService.save(role));
+		return ResponseEntity.ok().body(this.roleService.salvar(role));
 	}
 	
 	@GetMapping("/v1")

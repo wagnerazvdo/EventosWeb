@@ -14,15 +14,9 @@ import br.com.eventosweb.model.Usuario;
 public interface UsuarioService {
 
 	Usuario salvar(Usuario usuario);
-
 	List<Usuario> listarUsuario();
-
-	Usuario buscarPorId(Integer id);
-
+	void remover(Usuario usuario);
+	Usuario buscarPorId(Integer idUsuario);
 	void removerUsuario(Usuario buscarPorId);
-
-	void removerPorId(int idUsuario);
-
-	Usuario buscarPorId(int idUsuario);
 
 }
